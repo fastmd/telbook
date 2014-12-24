@@ -10,7 +10,8 @@ class CreatePersons < ActiveRecord::Migration
       t.string :email
       t.string :description
       
-      t.references :person
+      t.references :mgroup
+      t.references :position
       t.timestamps
     end
   end
