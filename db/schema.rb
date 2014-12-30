@@ -11,9 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141224060946) do
+ActiveRecord::Schema.define(version: 20141230091736) do
 
-  create_table "addnums", force: true do |t|
+  create_table "humen", force: true do |t|
+    t.string   "sname"
+    t.string   "name"
+    t.string   "fname"
+    t.string   "rtel"
+    t.string   "ltel"
+    t.string   "mtel"
+    t.string   "email"
+    t.string   "position"
+    t.string   "description"
+    t.integer  "mgroup_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -52,15 +62,6 @@ ActiveRecord::Schema.define(version: 20141224060946) do
     t.string   "email"
     t.string   "description"
     t.integer  "mgroup_id"
-    t.integer  "position_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "pos"
-  end
-
-  create_table "positions", force: true do |t|
-    t.string   "name"
-    t.integer  "pos_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
