@@ -1,3 +1,3 @@
 class Mservice < ActiveRecord::Base
-  has_many :mgroups
+  has_many :humans
 end

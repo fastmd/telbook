@@ -2,6 +2,9 @@ source 'http://rubygems.org'
 
 gem 'zurb-foundation', '~> 4.0.0'
 
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
@@ -33,7 +36,7 @@ gem 'jbuilder', '~> 1.2'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+  gem 'sdoc'
 end
 
 # Use ActiveModel has_secure_password
