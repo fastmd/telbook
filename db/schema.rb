@@ -11,20 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150105183712) do
+ActiveRecord::Schema.define(version: 20150106084934) do
 
-  create_table "addnums", force: true do |t|
+  create_table "humen", force: true do |t|
+    t.string   "roname"
+    t.string   "rosurname"
+    t.string   "rofname"
+    t.string   "tel"
+    t.string   "mtel"
+    t.string   "htel"
+    t.string   "roposition"
+    t.string   "rogroup"
+    t.text     "description"
+    t.string   "runame"
+    t.string   "rusurname"
+    t.string   "rufname"
+    t.string   "ruposition"
+    t.string   "rugroup"
+    t.integer  "mservice_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "humen", force: true do |t|
+  create_table "mgroups", force: true do |t|
     t.string   "name"
-    t.string   "surname"
-    t.string   "fname"
-    t.string   "position"
-    t.string   "bdate"
-    t.string   "mgroup"
+    t.integer  "gr_id"
     t.integer  "mservice_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -36,6 +47,7 @@ ActiveRecord::Schema.define(version: 20150105183712) do
     t.integer  "org_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "runame"
   end
 
   create_table "orgs", force: true do |t|
@@ -56,15 +68,6 @@ ActiveRecord::Schema.define(version: 20150105183712) do
     t.string   "email"
     t.string   "description"
     t.integer  "mgroup_id"
-    t.integer  "position_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "pos"
-  end
-
-  create_table "positions", force: true do |t|
-    t.string   "name"
-    t.integer  "pos_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -2,6 +2,8 @@ source 'http://rubygems.org'
 
 gem 'zurb-foundation', '~> 4.0.0'
 
+gem 'roo'
+
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 
