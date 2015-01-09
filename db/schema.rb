@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150106084934) do
+ActiveRecord::Schema.define(version: 20150107203026) do
 
   create_table "humen", force: true do |t|
     t.string   "roname"
@@ -33,49 +33,21 @@ ActiveRecord::Schema.define(version: 20150106084934) do
     t.datetime "updated_at"
   end
 
-  create_table "mgroups", force: true do |t|
-    t.string   "name"
-    t.integer  "gr_id"
-    t.integer  "mservice_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "mservices", force: true do |t|
-    t.string   "name"
-    t.integer  "serv_id"
-    t.integer  "org_id"
+    t.string   "roname"
+    t.text     "rodescription"
+    t.string   "runame"
+    t.text     "rudescription"
+    t.integer  "orgs_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "runame"
   end
 
   create_table "orgs", force: true do |t|
-    t.integer  "org_id"
-    t.string   "name"
-    t.string   "descr"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "persons", force: true do |t|
-    t.string   "sname"
-    t.string   "name"
-    t.string   "fname"
-    t.string   "rtel"
-    t.string   "ltel"
-    t.string   "mtel"
-    t.string   "email"
-    t.string   "description"
-    t.integer  "mgroup_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "services", force: true do |t|
-    t.string   "name"
-    t.integer  "serv_id"
-    t.integer  "org_id"
+    t.string   "roname"
+    t.text     "rodescription"
+    t.string   "runame"
+    t.text     "rudescription"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

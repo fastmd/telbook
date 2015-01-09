@@ -1,0 +1,19 @@
+<h1>Humans Search</h1>
+ 
+<%= form_for search_path, method: :get do |f| %>
+  <p>
+    <%= f.label "Search for" %>
+    <%= text_field_tag :q, params[:q] %>
+    <%= submit_tag "Go", name: nil %>
+  </p>
+<% end %>
+ 
+<ul>
+  <% @humans.each do |human| %>
+    <li>
+      <h3>
+        <%= link_to human.roname, controller: "humans", action: "show", id: human._id%>
+      </h3>
+    </li>
+  <% end %>
+</ul>
