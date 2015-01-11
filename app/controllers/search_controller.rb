@@ -4,7 +4,7 @@ class SearchController < ApplicationController
       if params[:q].nil?
         @humans = []
       else
-        @humans = Human.search params[:q]
+        @humans = Human.search(params[:q]).page(1).per(100)
       end
   end
   

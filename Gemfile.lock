@@ -175,6 +175,7 @@ DEPENDENCIES
   elasticsearch-rails
   jbuilder (~> 1.2)
   jquery-rails
+  kaminari
   rails (= 4.0.4)
   rails_admin
   roo

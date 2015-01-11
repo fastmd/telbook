@@ -11,9 +11,13 @@
 <ul>
   <% @humans.each do |human| %>
     <li>
-      <h3>
-        <%= link_to human.roname, controller: "humans", action: "show", id: human._id%>
-      </h3>
+      <p> <%= human.rosurname %>
+      	<%= human.roname %>
+      	<%= human.rofname %>
+      	<%= human.tel %>
+      	<%= human.mtel %>
+        <%= link_to "show", controller: "humans", action: "show", id: human._id%>
+      </p>
     </li>
   <% end %>
 </ul>
